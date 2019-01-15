@@ -23,7 +23,7 @@ public class ZhkuMoskva extends Page {
 
     public ZhkuMoskva switchToOplata(){
         clickByXpath(xpathOplataZhkuMoskva);
-        new WebDriverWait(webDriver,10).until(ExpectedConditions.titleContains("РѕРїР»Р°С‚Р°"));
+        new WebDriverWait(webDriver,10).until(ExpectedConditions.titleContains("оплата"));
         return this;
     }
 
@@ -38,9 +38,9 @@ public class ZhkuMoskva extends Page {
     }
 
     private void printErrorMessage() {
-        System.out.println("РЎС‚СЂР°РЅРёС†Р°: ");
+        System.out.println("Страница: ");
         printURL();
-        System.out.println("РћС€РёР±РєРё РЅРµ РІР°Р»РёРґРЅС‹С… РґР°РЅРЅС‹С…: ");
+        System.out.println("Ошибки не валидных данных: ");
         System.out.println(getTextByXpath(xpathKodPlatelshikaError));
         System.out.println(getTextByXpath(xpathPeriodOplatiError));
         System.out.println(getTextByXpath(xpathSummaDobrovStrahError));

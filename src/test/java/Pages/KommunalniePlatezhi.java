@@ -1,5 +1,6 @@
 package Pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,6 +31,7 @@ public class KommunalniePlatezhi extends Page {
         return new ZhkuMoskva(webDriver);
     }
 
+    @Step
     public KommunalniePlatezhi switcgLocation(String location) {
         clickByXpath(xpathLocationLabel);
         webDriver.findElement(By.linkText(location)).click();

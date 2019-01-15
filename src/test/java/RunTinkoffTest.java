@@ -14,8 +14,8 @@ public class RunTinkoffTest {
     private WebDriver webDriver;
     //Test Setup
     private final String url = "https://www.tinkoff.ru/";
-    private final String town = "РњРѕСЃРєРІРµ";
-    private final String location = "Рі. РЎР°РЅРєС‚-РџРµС‚РµСЂР±СѓСЂРі";
+    private final String town = "Москве";
+    private final String location = "г. Санкт-Петербург";
 
     private String providerUrl;
     private String provider;
@@ -39,6 +39,7 @@ public class RunTinkoffTest {
         KommunalniePlatezhi kommunalniePlatezhi = mainPage.getPlatezhi().getKommunalniePlatezhi();
 
         String str = kommunalniePlatezhi.getLocationLabel();
+        System.out.println(town);
         Assert.assertEquals(str,town);
         provider = kommunalniePlatezhi.getFirstResultName();
         System.out.println(provider);
@@ -65,7 +66,7 @@ public class RunTinkoffTest {
 
     @After
     public void stop(){
-        //webDriver.quit();
+        webDriver.quit();
     }
 
 
